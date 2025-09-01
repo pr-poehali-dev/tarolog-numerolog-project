@@ -91,7 +91,7 @@ const Index = () => {
                   <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
                     <span className="text-yellow-600 font-bold text-xs">Т</span>
                   </div>
-                  Тинькофф Банк
+                  Оплатить в Тинькофф Банк
                 </Button>
                 <div className="bg-mystic-deep/50 p-3 rounded-lg">
                   <p className="text-mystic-light text-sm mb-1">Перевод по номеру телефона:</p>
@@ -357,9 +357,17 @@ const Index = () => {
       {/* Services */}
       <section className="py-16 bg-mystic-dark/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-12 font-['Cormorant']">
-            Наши Услуги
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 font-['Cormorant']">
+              Наши Услуги
+            </h2>
+            <div className="inline-flex items-center gap-2 bg-mystic-purple/20 rounded-full px-6 py-2 border border-mystic-gold/30">
+              <div className="w-6 h-6 bg-yellow-600 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-xs">Т</span>
+              </div>
+              <span className="text-mystic-light">Оплата через Тинькофф Банк</span>
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
