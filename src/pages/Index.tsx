@@ -275,15 +275,15 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6 font-['Cormorant']">
-                О Нашей Практике
+                О Таролог Александра
               </h2>
               <p className="text-mystic-light text-lg leading-relaxed mb-6">
-                Более 15 лет опыта в эзотерических практиках. Помогаем людям найти 
-                ответы на важные жизненные вопросы через древнюю мудрость карт Таро.
+                Александра — сертифицированный таролог с более чем 15-летним опытом. 
+                Помогает людям найти ответы на важные жизненные вопросы через древнюю мудрость карт Таро.
               </p>
               <p className="text-mystic-light text-lg leading-relaxed mb-8">
-                Наша миссия — сделать магические знания доступными каждому через 
-                современные технологии и интерактивные онлайн-платформы.
+                Моя миссия — сделать магические знания доступными каждому через 
+                персональные консультации и интерактивные онлайн-сессии.
               </p>
               <Button className="bg-mystic-gold text-mystic-dark hover:bg-mystic-light">
                 <Icon name="Calendar" className="mr-2" />
@@ -293,11 +293,18 @@ const Index = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
                 <img 
-                  src="/img/57ccaabe-6aee-40b8-b6d7-2a7ed8933ae8.jpg" 
-                  alt="Мистический портрет гадалки"
+                  src="/img/392dd1f9-61a4-48ba-8c17-e044b992bd17.jpg" 
+                  alt="Таролог Александра"
                   className="w-full h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-mystic-dark/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6">
+                  <h3 className="text-white text-2xl font-bold font-['Cormorant'] mb-2">
+                    Александра
+                  </h3>
+                  <p className="text-mystic-light">Сертифицированный таролог</p>
+                  <p className="text-mystic-gold text-sm">Опыт более 15 лет</p>
+                </div>
               </div>
             </div>
           </div>
@@ -381,10 +388,10 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold text-mystic-gold mb-4 font-['Cormorant']">
-                ✨ Мистический Портал
+                ✨ Таролог Александра
               </h3>
               <p className="text-mystic-light">
-                Ваш путеводитель в мире эзотерики и древних знаний
+                Персональные консультации и обучение искусству Таро
               </p>
             </div>
             <div>
