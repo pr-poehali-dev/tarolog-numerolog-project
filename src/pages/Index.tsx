@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 
@@ -15,6 +17,106 @@ const Index = () => {
     { id: 4, name: "Император", meaning: "Власть, стабильность, порядок" },
     { id: 5, name: "Иерофант", meaning: "Духовность, традиции, учение" }
   ];
+
+  const services = [
+    {
+      icon: "Star",
+      title: "Персональные Расклады",
+      desc: "Индивидуальные консультации и расклады карт для решения жизненных вопросов",
+      price: 1500,
+      duration: "30-45 минут"
+    },
+    {
+      icon: "BookOpen", 
+      title: "Обучение Таро",
+      desc: "Комплексные курсы изучения Таро от базового до продвинутого уровня",
+      price: 5000,
+      duration: "4 недели"
+    },
+    {
+      icon: "Users",
+      title: "Групповые Сессии", 
+      desc: "Мастер-классы и групповые медитации с картами Таро",
+      price: 800,
+      duration: "1.5 часа"
+    }
+  ];
+
+  const PaymentDialog = ({ service }: { service: typeof services[0] }) => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button className="bg-mystic-purple hover:bg-mystic-gold hover:text-mystic-dark transition-colors">
+          Заказать
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="bg-mystic-dark border-mystic-purple/30 text-white max-w-md">
+        <DialogHeader>
+          <DialogTitle className="text-mystic-gold font-['Cormorant'] text-2xl">
+            Оплата услуги
+          </DialogTitle>
+        </DialogHeader>
+        <div className="space-y-4">
+          <Card className="bg-mystic-deep/50 border-mystic-purple/20">
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Icon name={service.icon as any} size={20} className="text-mystic-gold" />
+                {service.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-mystic-light text-sm">{service.desc}</p>
+              <div className="flex justify-between items-center">
+                <span className="text-mystic-light">Продолжительность:</span>
+                <span className="text-white">{service.duration}</span>
+              </div>
+              <Separator className="bg-mystic-purple/30" />
+              <div className="flex justify-between items-center text-xl font-bold">
+                <span>Стоимость:</span>
+                <span className="text-mystic-gold">{service.price}₽</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-mystic-purple/20 border-mystic-gold/30">
+            <CardContent className="p-4">
+              <h3 className="font-semibold mb-3 text-mystic-gold flex items-center gap-2">
+                <Icon name="CreditCard" size={18} />
+                Способы оплаты
+              </h3>
+              <div className="space-y-3">
+                <Button 
+                  className="w-full bg-yellow-600 hover:bg-yellow-500 text-white justify-start gap-3"
+                  onClick={() => window.open(`https://www.tinkoff.ru/rm/petrov.aleksandr27/BDqoh36469`, '_blank')}
+                >
+                  <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
+                    <span className="text-yellow-600 font-bold text-xs">Т</span>
+                  </div>
+                  Тинькофф Банк
+                </Button>
+                <div className="bg-mystic-deep/50 p-3 rounded-lg">
+                  <p className="text-mystic-light text-sm mb-1">Перевод по номеру телефона:</p>
+                  <p className="text-mystic-gold font-mono">+7 977 194-02-44</p>
+                  <p className="text-xs text-mystic-light mt-1">
+                    После оплаты вам придет подтверждение на указанный контакт
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="text-center">
+            <p className="text-mystic-light text-sm">
+              Безопасная оплата через Тинькофф Банк
+            </p>
+            <div className="flex justify-center items-center gap-2 mt-2">
+              <Icon name="Shield" size={16} className="text-mystic-gold" />
+              <span className="text-xs text-mystic-light">256-bit SSL шифрование</span>
+            </div>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
 
   const handleCardClick = (cardId: number) => {
     if (!flippedCards.includes(cardId)) {
