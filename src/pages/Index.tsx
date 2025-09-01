@@ -21,6 +21,13 @@ const Index = () => {
   const services = [
     {
       icon: "Star",
+      title: "Экспресс-Расклад",
+      desc: "Быстрый расклад на одну ситуацию или вопрос через Telegram",
+      price: 350,
+      duration: "15 минут"
+    },
+    {
+      icon: "Heart",
       title: "Персональные Расклады",
       desc: "Индивидуальные консультации и расклады карт для решения жизненных вопросов",
       price: 1500,
@@ -32,13 +39,6 @@ const Index = () => {
       desc: "Комплексные курсы изучения Таро от базового до продвинутого уровня",
       price: 5000,
       duration: "4 недели"
-    },
-    {
-      icon: "Users",
-      title: "Групповые Сессии", 
-      desc: "Мастер-классы и групповые медитации с картами Таро",
-      price: 800,
-      duration: "1.5 часа"
     }
   ];
 
@@ -200,6 +200,14 @@ const Index = () => {
                   </div>
                 </div>
 
+                <div className="bg-mystic-gold/20 border border-mystic-gold/30 rounded-xl p-4 mb-6">
+                  <div className="text-center">
+                    <p className="text-mystic-gold font-semibold mb-1">⚡ Экспресс-расклад</p>
+                    <p className="text-2xl font-bold text-white">от 350₽</p>
+                    <p className="text-mystic-light text-sm">Быстрый ответ на ваш вопрос</p>
+                  </div>
+                </div>
+
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-mystic-gold rounded-full flex items-center justify-center mt-1">
@@ -207,7 +215,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Мгновенные расклады</h4>
-                      <p className="text-mystic-light text-sm">Получите расклад за 30 секунд</p>
+                      <p className="text-mystic-light text-sm">Получите расклад за 30 секунд от 350₽</p>
                     </div>
                   </div>
                   
