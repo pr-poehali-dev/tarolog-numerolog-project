@@ -177,6 +177,128 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Telegram Bot Section */}
+      <section className="py-16 bg-gradient-to-r from-mystic-purple/20 to-mystic-deep/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 font-['Cormorant']">
+              Таро в Telegram
+            </h2>
+            <p className="text-mystic-light text-lg">Получайте персональные расклады прямо в мессенджере</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <div className="bg-mystic-dark/60 rounded-3xl p-8 border border-mystic-purple/30">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center">
+                    <Icon name="MessageCircle" size={32} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white font-['Cormorant']">@TarotAlexandra_bot</h3>
+                    <p className="text-mystic-gold">Персональный бот-таролог</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-mystic-gold rounded-full flex items-center justify-center mt-1">
+                      <Icon name="Check" size={14} className="text-mystic-dark" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Мгновенные расклады</h4>
+                      <p className="text-mystic-light text-sm">Получите расклад за 30 секунд</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-mystic-gold rounded-full flex items-center justify-center mt-1">
+                      <Icon name="Check" size={14} className="text-mystic-dark" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Доступно 24/7</h4>
+                      <p className="text-mystic-light text-sm">Бот работает круглосуточно</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-mystic-gold rounded-full flex items-center justify-center mt-1">
+                      <Icon name="Check" size={14} className="text-mystic-dark" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Разные типы раскладов</h4>
+                      <p className="text-mystic-light text-sm">На любовь, карьеру, финансы</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-mystic-gold rounded-full flex items-center justify-center mt-1">
+                      <Icon name="Check" size={14} className="text-mystic-dark" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Персональные консультации</h4>
+                      <p className="text-mystic-light text-sm">Запись к Александре через бот</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button 
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white text-lg py-4"
+                  onClick={() => window.open('https://t.me/TarotAlexandra_bot', '_blank')}
+                >
+                  <Icon name="MessageCircle" className="mr-2" />
+                  Открыть бот в Telegram
+                </Button>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <Card className="bg-mystic-dark/80 border-mystic-purple/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-mystic-purple/30 rounded-full flex items-center justify-center">
+                      <Icon name="Zap" size={24} className="text-mystic-gold" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Быстрые расклады</h3>
+                      <p className="text-mystic-light">Отправьте вопрос боту и получите расклад из 3 карт с подробной интерпретацией</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 border-mystic-purple/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-mystic-purple/30 rounded-full flex items-center justify-center">
+                      <Icon name="Calendar" size={24} className="text-mystic-gold" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Запись на консультации</h3>
+                      <p className="text-mystic-light">Выберите удобное время для личной беседы с Александрой</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-mystic-dark/80 border-mystic-purple/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-mystic-purple/30 rounded-full flex items-center justify-center">
+                      <Icon name="Star" size={24} className="text-mystic-gold" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Ежедневные предсказания</h3>
+                      <p className="text-mystic-light">Подпишитесь на ежедневную карту дня и узнавайте что готовит судьба</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Tarot Reading */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
@@ -397,7 +519,7 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Услуги</h4>
               <ul className="space-y-2">
-                {["Расклады Таро", "Обучение", "Консультации", "Групповые сессии"].map(item => (
+                {["Расклады Таро", "Telegram бот", "Консультации", "Групповые сессии"].map(item => (
                   <li key={item}>
                     <a href="#" className="text-mystic-light hover:text-mystic-gold transition-colors">
                       {item}
