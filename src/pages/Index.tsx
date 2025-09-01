@@ -132,7 +132,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-mystic-gold font-['Cormorant']">
-              ✨ Мистический Портал
+              ✨ Таролог Александра
             </h1>
             <div className="hidden md:flex space-x-6">
               {["Главная", "Расклады", "Обучение", "Услуги", "Отзывы", "Галерея", "Блог"].map((item) => (
